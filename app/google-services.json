@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "153201490798",
+    "firebase_url": "https://flatz-973e4.firebaseio.com",
+    "project_id": "flatz-973e4",
+    "storage_bucket": "flatz-973e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153201490798:android:2d7a0a425f4667197d5f7f",
+        "android_client_info": {
+          "package_name": "com.example.flatz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153201490798-1pu12tnsb47no7let87tjj4b7gntkudq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZUDb__4-SpbrmrXAqaBxodZ_75dNaodg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "153201490798-1pu12tnsb47no7let87tjj4b7gntkudq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

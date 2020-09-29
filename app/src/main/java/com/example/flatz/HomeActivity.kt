@@ -21,19 +21,22 @@ class HomeActivity : AppCompatActivity() {
         //Setup
         val bundle = intent.extras
         val email = bundle?.getString("email")
-        val provider = bundle?.getString("provider")
-        setup(email ?: "",provider ?:"")
+        setup(email ?: "")
     }
 
-    private fun setup(email: String,provider: String)
+    private fun setup(email: String)
     {
         title = "Home"
         emailTextView.text = email
-        providerTextView.text= provider
 
         logOutButton.setOnClickListener{
             FirebaseAuth.getInstance().signOut()
             val intent = Intent(this, AuthActivity::class.java)
+            startActivity(intent)
+        }
+
+        imageViewLindas.setOnClickListener{
+            val intent = Intent(this, CosasLindasActivity::class.java)
             startActivity(intent)
         }
     }

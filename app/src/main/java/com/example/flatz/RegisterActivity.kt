@@ -98,7 +98,7 @@ class RegisterActivity : AppCompatActivity() {
                     ).addOnCompleteListener{
                         if(it.isSuccessful) {
                             writeNewUser((maxId+1).toString(),email,sexo,perfil)
-                            showHome(it.result?.user?.email ?: "", ProviderType.EmailPassword)
+                            showHome(it.result?.user?.email ?: "")
 
                             spanEmail.visibility = View.INVISIBLE
                             spanPassword.visibility=View.INVISIBLE
@@ -129,10 +129,9 @@ class RegisterActivity : AppCompatActivity() {
         database.child("users").child(userId).setValue(user)
     }
 
-    private fun showHome(email: String, provider: ProviderType) {
+    private fun showHome(email: String) {
         val homeIntent: Intent = Intent(this, HomeActivity::class.java).apply {
             putExtra("email", email)
-            putExtra("provider", provider.name)
         }
         startActivity(homeIntent)
     }

@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_index_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name="com.example.flatz.CosasLindasActivity" android:theme="@style/Theme.AppCompat"/>
         <activity android:name="com.example.flatz.splashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +20,10 @@
         <activity android:name="com.example.flatz.RegisterActivity" />
         <activity android:name="com.example.flatz.HomeActivity" />
         <activity android:name="com.example.flatz.AuthActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

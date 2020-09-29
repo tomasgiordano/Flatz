@@ -31,7 +31,7 @@ class AuthActivity : AppCompatActivity() {
                     passwordEditText.text.toString()
                 ).addOnCompleteListener{
                     if(it.isSuccessful) {
-                        showHome(it.result?.user?.email ?: "", ProviderType.EmailPassword)
+                        showHome(it.result?.user?.email ?: "")
                         txtError.visibility = View.INVISIBLE
                         emailEditText.setText("")
                         passwordEditText.setText("")
@@ -89,10 +89,9 @@ class AuthActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun showHome(email: String, provider: ProviderType) {
+    private fun showHome(email: String) {
         val homeIntent: Intent = Intent(this, HomeActivity::class.java).apply {
             putExtra("email", email)
-            putExtra("provider", provider.name)
         }
         startActivity(homeIntent)
     }

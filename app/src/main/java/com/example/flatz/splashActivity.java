@@ -33,7 +33,7 @@ public class splashActivity extends AppCompatActivity{
         textViewFall1.animate();
 
         topAnimation = AnimationUtils.loadAnimation(this,R.anim.top_animation);
-        image = findViewById(R.id.imageView2);
+        image = findViewById(R.id.ivFoto2);
         image.setAnimation(topAnimation);
 
         new Handler().postDelayed(new Runnable() {

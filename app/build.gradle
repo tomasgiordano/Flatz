@@ -13,6 +13,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -38,11 +39,22 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.3.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:multidex:1.0.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.google.firebase:firebase-analytics:17.5.0'
-    implementation 'com.google.firebase:firebase-database-ktx:19.3.1'
 
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation 'com.google.firebase:firebase-database-ktx:19.3.1'
+    implementation 'com.google.firebase:firebase-storage:19.1.1'
+
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.4.+'
+    implementation 'com.squareup.picasso:picasso:2.5.0'
+    implementation 'id.zelory:compressor:2.1.0'
+    //noinspection GradleCompatible
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
     def htextview_version = "0.1.6"
     implementation "com.hanks:htextview-base:$htextview_version"        // base library
     implementation "com.hanks:htextview-fade:$htextview_version"        // optional

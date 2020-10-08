@@ -142,10 +142,10 @@ class RegisterActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists()) {
                     maxId=(snapshot.children.count())
-                }
-            }
-            override fun onCancelled(error: DatabaseError){
-            }
+        }
+    }
+    override fun onCancelled(error: DatabaseError){
+    }
         })
     }
 }

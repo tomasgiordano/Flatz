@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.loginscreen">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_index"
@@ -9,7 +13,10 @@
         android:roundIcon="@mipmap/ic_index_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name="com.example.flatz.CosasLindasActivity" android:theme="@style/Theme.AppCompat"/>
+        <activity android:name="com.example.flatz.Lindas.VerGaleriaLindaActivity"></activity>
+        <activity android:name="com.example.flatz.Feas.VerGaleriaFeaActivity"></activity>
+        <activity android:name="com.example.flatz.Lindas.AgregarFotoLindaActivity" />
+        <activity android:name="com.example.flatz.Feas.AgregarFotoFeaActivity" />
         <activity android:name="com.example.flatz.splashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +31,10 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"></activity>
     </application>
 
 </manifest>

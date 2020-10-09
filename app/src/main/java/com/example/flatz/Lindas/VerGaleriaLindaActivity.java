@@ -26,7 +26,7 @@ import java.util.ArrayList;
 public class VerGaleriaLindaActivity extends AppCompatActivity {
     RecyclerView rv_galeria;
     GaleriaAdapter adapter;
-    ImageView ivCamera;
+    ImageView ivCamera,ivGrafico;
     Button salir;
     ArrayList<Galeria> galeriaArrayList;
     LinearLayoutManager mlayoutManager;
@@ -70,6 +70,16 @@ public class VerGaleriaLindaActivity extends AppCompatActivity {
             }
         });
 
+        ivGrafico=findViewById(R.id.ivGraphic);
+        ivGrafico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent p = new Intent(v.getContext(), GraficoLindoActivity.class);
+                p.putExtra("email",email);
+                startActivity(p);
+            }
+        });
+
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference ref = database.getReference("FotosLindasSubidas");
@@ -81,9 +91,8 @@ public class VerGaleriaLindaActivity extends AppCompatActivity {
                     galeriaArrayList.removeAll(galeriaArrayList);
                     for(DataSnapshot snapshot1 : snapshot.getChildren())
                     {
-
-                        Galeria gal = snapshot1.getValue(Galeria.class);
-
+                        Galeria gal = new Galeria();
+                        gal = snapshot1.getValue(Galeria.class);
                         galeriaArrayList.add(gal);
                     }
                     adapter.notifyDataSetChanged();

@@ -13,8 +13,10 @@
         android:roundIcon="@mipmap/ic_index_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name="com.example.flatz.Lindas.VerGaleriaLindaActivity"></activity>
-        <activity android:name="com.example.flatz.Feas.VerGaleriaFeaActivity"></activity>
+        <activity android:name="com.example.flatz.Lindas.GraficoLindoActivity"></activity>
+        <activity android:name="com.example.flatz.Feas.GraficoFeoActivity"></activity>
+        <activity android:name="com.example.flatz.Lindas.VerGaleriaLindaActivity" />
+        <activity android:name="com.example.flatz.Feas.VerGaleriaFeaActivity" />
         <activity android:name="com.example.flatz.Lindas.AgregarFotoLindaActivity" />
         <activity android:name="com.example.flatz.Feas.AgregarFotoFeaActivity" />
         <activity android:name="com.example.flatz.splashActivity">
@@ -34,7 +36,7 @@
 
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
-            android:theme="@style/Base.Theme.AppCompat"></activity>
+            android:theme="@style/Base.Theme.AppCompat" />
     </application>
 
 </manifest>

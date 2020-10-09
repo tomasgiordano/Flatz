@@ -45,7 +45,7 @@ import id.zelory.compressor.Compressor;
 public class AgregarFotoLindaActivity extends AppCompatActivity {
 
     Button btnSubir,btnSeleccionar;
-    ImageView foto,home;
+    ImageView foto,home,grafico;
     Button salir;
     DatabaseReference imgref;
     StorageReference storageReference;
@@ -78,6 +78,16 @@ public class AgregarFotoLindaActivity extends AppCompatActivity {
                  Intent p = new Intent(v.getContext(), VerGaleriaLindaActivity.class);
                  p.putExtra("email",email);
                  startActivity(p);
+            }
+        });
+
+        grafico=findViewById(R.id.ivGraphic);
+        grafico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent p = new Intent(v.getContext(), GraficoLindoActivity.class);
+                p.putExtra("email",email);
+                startActivity(p);
             }
         });
 

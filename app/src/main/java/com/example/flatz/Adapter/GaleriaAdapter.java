@@ -20,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
+import java.io.BufferedOutputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,6 +30,7 @@ public class GaleriaAdapter extends RecyclerView.Adapter<GaleriaAdapter.FotosVie
     List<Galeria> galeriaList;
     Context context;
     DatabaseReference mDataBase;
+    Boolean flag=true;
 
     public GaleriaAdapter(List<Galeria> galeriaList, Context context) {
         this.galeriaList = galeriaList;
@@ -59,8 +61,18 @@ public class GaleriaAdapter extends RecyclerView.Adapter<GaleriaAdapter.FotosVie
                 holder.button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        gal.setVotos(gal.getVotos()+1);
-                        holder.button.setText(String.valueOf(gal.getVotos()));
+                        if(flag)
+                        {
+                            gal.setVotos(gal.getVotos()+1);
+                            holder.button.setText(String.valueOf(gal.getVotos()));
+                            flag=!flag;
+                        }
+                        else
+                        {
+                            gal.setVotos(gal.getVotos()-1);
+                            holder.button.setText(String.valueOf(gal.getVotos()));
+                            flag=!flag;
+                        }
                     }
                 });
             }

@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public class VerGaleriaFeaActivity extends AppCompatActivity {
     RecyclerView rv_galeria;
     GaleriaAdapter adapter;
-    ImageView ivCamera;
+    ImageView ivCamera,grafico;
     Button salir;
     ArrayList<Galeria> galeriaArrayList;
     LinearLayoutManager mlayoutManager;
@@ -72,6 +72,15 @@ public class VerGaleriaFeaActivity extends AppCompatActivity {
             }
         });
 
+        grafico=findViewById(R.id.ivGraphic);
+        grafico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent p = new Intent(v.getContext(), GraficoFeoActivity.class);
+                p.putExtra("email",email);
+                startActivity(p);
+            }
+        });
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference ref = database.getReference("FotosFeasSubidas");
